@@ -1,7 +1,7 @@
 # Django & React application
 (Based on: [https://github.com/18F/docker-compose-django-react](https://github.com/18F/docker-compose-django-react))
 
-This is a set up so that we can easily create apps that use Django on the backend (and take advantage of the amazing admin UI) and React (set up with [`create-react-app`](https://npm.im/create-react-app)) for the front end application.
+This is a prototype, for my personal use only. It consist of Django REST API (CRUD functionality) and React frontend (work in progress).
 
 ## Running
 
