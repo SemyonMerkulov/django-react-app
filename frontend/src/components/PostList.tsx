@@ -1,29 +1,30 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useAppActions, useAppSelector } from '../hooks';
 import PostItem from './PostItem';
 
 const PostList: React.FC = () => {
+  const {error, loading, posts} = useAppSelector(state => state.post);
+  const {fetchPosts} = useAppActions();
 
-  const postsMock = [
-    {
-      id: 1,
-      title: "lorem mothefucking ipsum",
-      text: "stupid shitty text"
-    },
-    {
-      id: 2,
-      title: "lorem mothefucking ipsum",
-      text: "stupid shitty text"
-    },
-    {
-      id: 3,
-      title: "lorem mothefucking ipsum",
-      text: "stupid shitty text"
-    }
-  ];
+  useEffect(() => {
+    fetchPosts();
+  }, [])
+
+  if (loading) {
+    return <div className="spinner-border" role="status"/>
+  }
+  if (error) {
+    return (
+      <div className="alert alert-danger" role="alert">
+        {error}
+      </div>
+    );  
+  }
+
 
   return (
     <div className="mt-4">
-      {postsMock.map(item => {
+      {posts.map(item => {
         return <PostItem 
           title={item.title} 
           text={item.text} 
