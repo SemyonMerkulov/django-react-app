@@ -2,9 +2,9 @@ import React from 'react';
 
 const App = () => {
   return (
-    <React.Fragment>
-
-    </React.Fragment>
+    <div className="container">
+      <h1>Posts list</h1>
+    </div>
   );
 };
 
