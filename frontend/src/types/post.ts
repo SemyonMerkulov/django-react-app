@@ -4,6 +4,11 @@ export interface PostState {
   error: null | string
 }
 
+export type PostItemProps = {
+  title: string,
+  text: null | string
+}
+
 export enum PostActionTypes {
   FETCH_POSTS = 'FETCH_POSTS',
   FETCH_POSTS_SUCCESS = 'FETCH_POSTS_SUCCESS',
