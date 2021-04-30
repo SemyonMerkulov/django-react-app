@@ -10,6 +10,16 @@ This is a app prototype, for my personal use only. It consist of Django REST API
 1. There should now be two servers running:
   - [http://127.0.0.1:5000](http://127.0.0.1:5000) is the Django app
   - [http://127.0.0.1:3000](http://127.0.0.1:3000) is the React app
+1. `docker-compose run --rm django python3 manage.py migrate`
+
+## API routes
+
+- `GET /api/posts` posts list
+- `POST /api/posts` create a new post
+- `GET /api/posts/:id` get post detail
+- `PATCH /api/posts/:id` update post
+- `PUT /api/posts/:id` rewrite post
+- `DELETE /api/posts/:id` delete post
 
 ## Using `docker-compose run` to issue one-off commands
 
