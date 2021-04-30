@@ -26,6 +26,7 @@ const PostList: React.FC = () => {
     <div className="mt-3">
       {posts.map(item => {
         return <PostItem 
+          id={item.id}
           title={item.title} 
           text={item.text} 
           key={item.id}
