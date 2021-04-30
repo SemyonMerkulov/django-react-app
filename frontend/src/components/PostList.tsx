@@ -23,7 +23,7 @@ const PostList: React.FC = () => {
 
 
   return (
-    <div className="mt-4">
+    <div className="mt-3">
       {posts.map(item => {
         return <PostItem 
           title={item.title} 
